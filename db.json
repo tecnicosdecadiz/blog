@@ -1,0 +1,39 @@
+{
+  "blog": [
+    {
+      "id": 1,
+      "title": "Camello de ejemplo 1aad",
+      "summary": "aaes simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándarde las",
+      "image": "cammelPostExample2.jpg",
+      "content": "<p>sdadsLorem iadasd</p>"
+    },
+    {
+      "title": "xcv",
+      "summary": "vxz",
+      "image": "cammelPostExample2.jpg",
+      "content": "<p><strong>vxz</strong>vcxz ss</p>",
+      "id": 2
+    },
+    {
+      "title": "ass",
+      "summary": "sss",
+      "image": "cammelPostExample3.jpg",
+      "content": "<p>sss</p>",
+      "id": 3
+    },
+    {
+      "title": "g",
+      "summary": "g",
+      "image": "cammelPostExample2.jpg",
+      "content": "<p>fasd asd asd asda sd asdasd&nbsp; asdsadasda s</p>",
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "user": "Victor",
+      "password": "nabo"
+    }
+  ]
+}
