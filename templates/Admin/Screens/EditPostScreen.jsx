@@ -12,7 +12,6 @@ export default function EditPostScreen() {
   const [validationSchema] = useState(
     Yup.object().shape({
       title: Yup.string().required('El campo no puede estar vacío'),
-      summary: Yup.string().required('El campo no puede estar vacío'),
       image: Yup.string().required('El campo no puede estar vacío'),
       content: Yup.string().required('El campo no puede estar vacío'),
     })
@@ -52,7 +51,6 @@ export default function EditPostScreen() {
             <Formik
               initialValues={{
                 title: blog.title,
-                summary: blog.summary,
                 image: blog.image,
                 content: blog.content,
               }}
@@ -77,20 +75,6 @@ export default function EditPostScreen() {
                         />
                         {errors.title && (
                           <div className="text-danger">{errors.title}</div>
-                        )}
-                      </div>
-
-                      <div className="mt-3">
-                        <Field
-                          type="text"
-                          name="summary"
-                          placeholder="Resumen"
-                          onChange={(v) =>
-                            setFieldValue('summary', v.target.value)
-                          }
-                        />
-                        {errors.summary && (
-                          <div className="text-danger">{errors.summary}</div>
                         )}
                       </div>
 

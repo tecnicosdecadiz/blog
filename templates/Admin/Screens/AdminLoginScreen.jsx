@@ -4,22 +4,19 @@ import { useEffect, useState } from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 
 export default function AdminLoginScreen() {
-    const navigate = useNavigate();
-  const [tempLogedUser, setTempLogedUser] = useState(true);
+  const navigate = useNavigate();
+  const [tempLogedUser, setTempLogedUser] = useState(false);
   const ruta = window.location.pathname;
 
   const handleLoginAdminUser = (payload) => {
     axios
-      .get('http://localhost:3000/users')
+      .get(
+        `http://localhost:3000/users?user=${payload.user}&password=${payload.password}`
+      )
       .then((r) => {
-        r.data.map((u) => {
-          if (u.user === payload.user && u.password === payload.password) {
-            setTempLogedUser(true);
-          } else {
-            setTempLogedUser(false);
-            alert('Error, introduzca usuario o contraseña correcta');
-          }
-        });
+        if (r.data.length > 0) 
+        setTempLogedUser(true);
+      else{alert('Usuario o contraseña invalido')}
       })
       .catch((err) => console.log(err));
   };

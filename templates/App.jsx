@@ -18,13 +18,14 @@ export default function App() {
     <Routes>
       <Route path="/" element={<UserHeader />}>
         <Route path="/" element={<HomeScreen />} />
+        <Route path="/:page" element={<HomeScreen />} />
         <Route path="/blog/:blogId" element={<BlogScreen />} />
       </Route>
 
       <Route path="/admin" element={<AdminLoginScreen />}>
         <Route path="/admin" element={<AdminHomeScreen />} />
-        <Route path="/admin/newPost" element={<AddPostScreen />} />
-        <Route path="/admin/editPost/:blogId" element={<EditPostScreen />} />
+        <Route path="newPost" element={<AddPostScreen />} />
+        <Route path="editPost/:blogId" element={<EditPostScreen />} />
       </Route>
     </Routes>
   );

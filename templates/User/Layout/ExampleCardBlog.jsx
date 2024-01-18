@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
 
-/* eslint-disable react/prop-types */
 export default function ExampleCardBlog(props) {
   const { exampleBlog } = props;
+
+  const truncateString = (str, maxLength) => {
+    return str.length > maxLength ? str.substring(0, maxLength) + '...' : str;
+  };
+
   return (
     <section>
       <Link
@@ -11,8 +15,13 @@ export default function ExampleCardBlog(props) {
         style={{ display: 'flex', alignItems: 'center' }}
       >
         <div className="col-8">
-          <div className="titleExamplePost mb-3">{exampleBlog.title}</div>
-          <p>{exampleBlog.summary}</p>
+          <h3 className="titleExamplePost mb-3">{exampleBlog.title}</h3>
+
+          <p
+            dangerouslySetInnerHTML={{
+              __html: truncateString(exampleBlog.content, 500),
+            }}
+          />
         </div>
         <div className="col-3">
           <img

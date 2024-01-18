@@ -1,22 +1,20 @@
-
-body{
-    font-size: 18px;
-
+body {
+  font-size: 18px;
 }
-a{
-  color: inherit; 
+a {
+  color: inherit;
   text-decoration: none;
-  transition: transform 0.3s ease-in-out; 
+  transition: transform 0.3s ease-in-out;
 }
-a:hover{
+a:hover {
   transform: scale(1.03);
 }
 
-.btn{
-    background-color: #51656c;
+.btn {
+  background-color: #51656c;
 }
 
-.pointer{
+.pointer {
   cursor: pointer;
 }
 
@@ -24,18 +22,18 @@ h1 {
   font-size: 100px;
 }
 
-.primary{
-  color:#51656c;
+.primary {
+  color: #51656c;
 }
 
 .container-fluid {
   height: 100vh;
 }
 
-.container{
+.container {
   margin-top: 70px;
 }
-.container-custom{
+.container-custom {
   margin-top: 70px;
   padding-right: 5%;
   padding-left: 5%;
@@ -48,6 +46,14 @@ table td {
 ul {
   list-style-type: none;
 }
+
+.darkTheme{
+  background-color: #333333;
+  color: white
+}
+
+
+
 
 /* USER */
 .header-user-blog {
@@ -66,40 +72,47 @@ ul {
   margin: 50px 0 50px 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to right, transparent 1%, #51656c 50%, #51656c 50%, transparent 100%);
+  background: linear-gradient(
+    to right,
+    transparent 1%,
+    #51656c 50%,
+    #51656c 50%,
+    transparent 100%
+  );
 }
 
-.titleExamplePost{
-    font-weight: bold;
-    font-size: 20;
+.titleExamplePost {
+  font-weight: bold;
+  font-size: 20;
 }
-.imageExamplePost{
-    max-width: 300px;
-    max-height: 300px;
-    display: block;
+.imageExamplePost {
+  max-width: 300px;
+  max-height: 300px;
+  display: block;
 }
 /* Blog */
 .blogContainer {
-  overflow: hidden; /* Para contener elementos flotantes */}
+  overflow: hidden;
+}
 
 .summary {
-float: left; /* Hace que el texto flote a la izquierda */
-  width: calc(100% - 20px); /* El ancho del texto es el 100% del contenedor menos el ancho del margen derecho de la imagen */
+  float: left;
+  width: calc(100% - 20px);
 }
 
 .summaryImage {
-  float: right; /* Hace que la imagen flote a la derecha */
+  float: right;
   margin-left: 20px;
   margin-bottom: 20px;
 }
 
-.blogImage{
-    max-width: 800px;
-    max-height: 800px;
+.blogImage {
+  max-width: 800px;
+  max-height: 800px;
 }
 
 /* ADMIN */
-.linkNavbar{
+.linkNavbar {
   color: #51656c;
   cursor: pointer;
 }
@@ -109,7 +122,7 @@ float: left; /* Hace que el texto flote a la izquierda */
 .wrapper {
   display: flex;
   align-items: center;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   width: 100%;
   min-height: 100%;
@@ -125,8 +138,8 @@ float: left; /* Hace que el texto flote a la izquierda */
   max-width: 450px;
   position: relative;
   padding: 0px;
-  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
-  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
@@ -152,7 +165,9 @@ h2.active {
 
 /* FORM TYPOGRAPHY*/
 
-input[type=button], input[type=submit], input[type=reset]  {
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
   background-color: #51656c;
   border: none;
   color: white;
@@ -172,11 +187,15 @@ input[type=button], input[type=submit], input[type=reset]  {
   transition: all 0.3s ease-in-out;
 }
 
-input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+input[type='button']:hover,
+input[type='submit']:hover,
+input[type='reset']:hover {
   background-color: #51656c;
 }
 
-input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+input[type='button']:active,
+input[type='submit']:active,
+input[type='reset']:active {
   -moz-transform: scale(0.95);
   -webkit-transform: scale(0.95);
   -o-transform: scale(0.95);
@@ -184,7 +203,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   transform: scale(0.95);
 }
 
-input[type=text] {
+input[type='text'] {
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
@@ -205,12 +224,12 @@ input[type=text] {
   border-radius: 5px 5px 5px 5px;
 }
 
-input[type=text]:focus {
+input[type='text']:focus {
   background-color: #fff;
   border-bottom: 2px solid #51656c;
 }
 
-input[type=text]:placeholder {
+input[type='text']:placeholder {
   color: #cccccc;
 }
 /* ANIMATIONS */
@@ -252,23 +271,44 @@ input[type=text]:placeholder {
 }
 
 /* Simple CSS3 Fade-in Animation */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 .fadeIn {
-  opacity:0;
-  -webkit-animation:fadeIn ease-in 1;
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
 
-  -webkit-animation-fill-mode:forwards;
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 
-  -webkit-animation-duration:1s;
-  -moz-animation-duration:1s;
-  animation-duration:1s;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 .fadeIn.first {
@@ -303,7 +343,7 @@ input[type=text]:placeholder {
   width: 0;
   height: 2px;
   background-color: #51656c;
-  content: "";
+  content: '';
   transition: width 0.2s;
 }
 
@@ -311,17 +351,17 @@ input[type=text]:placeholder {
   color: #0d0d0d;
 }
 
-.underlineHover:hover:after{
+.underlineHover:hover:after {
   width: 100%;
 }
 
 /* OTHERS */
 
 *:focus {
-    outline: none;
-} 
+  outline: none;
+}
 
 #icon {
-  width:60%;
+  width: 60%;
 }
 /* > login */

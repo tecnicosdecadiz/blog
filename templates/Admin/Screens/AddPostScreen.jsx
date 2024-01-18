@@ -11,7 +11,6 @@ export default function AddPostScreen() {
   const [validationSchema] = useState(
     Yup.object().shape({
       title: Yup.string().required('El campo no puede estar vacío'),
-      summary: Yup.string().required('El campo no puede estar vacío'),
       image: Yup.string().required('El campo no puede estar vacío'),
       content: Yup.string().required('El campo no puede estar vacío'),
     })
@@ -37,7 +36,6 @@ export default function AddPostScreen() {
           <Formik
             initialValues={{
               title: '',
-              summary: '',
               image: null,
               content: '',
             }}
@@ -60,20 +58,6 @@ export default function AddPostScreen() {
                       />
                       {errors.title && (
                         <div className="text-danger">{errors.title}</div>
-                      )}
-                    </div>
-
-                    <div className="mt-3">
-                      <Field
-                        type="text"
-                        name="summary"
-                        placeholder="Resumen"
-                        onChange={(v) =>
-                          setFieldValue('summary', v.target.value)
-                        }
-                      />
-                      {errors.summary && (
-                        <div className="text-danger">{errors.summary}</div>
                       )}
                     </div>
 
